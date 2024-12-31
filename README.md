@@ -11,7 +11,7 @@ Modbus haberleşme protokolünde 43 (Read Device Identification) fonksiyonunu ku
 
 Kimlik bilgisi sorgusuna yanıt veren cihazların kimlik bilgilerini listeler ve ağdaki modbus konuşan cihazların görünmesini sağlar.
 
-Kodun optimizasyonu için timeout değerleriyle oynayabilirsiniz. 
+Kodun optimizasyonu için timeout değerleriyle oynayabilirsiniz. Ayrıca "Slave_id" parametresi default olarak 1 girilmiştir. Gömülü ethernet olmayan cihazlarda (Örneğin Altivar930 serisi sürücülerde) slave_id parametresini cihazın modbus ayarlarındaki id ile eşitlemeniz gerekir. Ya da cihazın id'sini 1'e ayarlamanız gerekir. Program kodlarından slave_id ayarını 255 ya da 254 yaparak farklı sonuçlar alabilirsiniz. 
 
 Subnet üzerinden tarama yaptığı için farklı subnetler kullanıyorsanız subnet alanını doğru doldurmanız gerekir. 
 
