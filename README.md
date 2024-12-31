@@ -1,4 +1,10 @@
 # modbuSIS
+
+GPL3.0 ile lisanslanmıştır. 
+
+Windows işletim sistemleri için exe dosyasını kullanabilirsiniz. 
+MacOS ve Linux sistemler için derlenmiş kod üretilmemiştir, ancak yazılımın kaynak kodlarını indirip GPL Lisansı'na göre kullanabilirsiniz. 
+
 modbuSIS yazılımı, TCP/IP ağlarındaki Modbus konuşan cihazları bulur ve kimliklerini listeler. 
 
 Modbus haberleşme protokolünde 43 (Read Device Identification) fonksiyonunu kullanır ve 502 numaralı portu açık cihazlardan kimlik bilgisi ister.
