@@ -5,6 +5,8 @@ from PIL import Image, ImageTk
 import ipaddress
 from pymodbus.client import ModbusTcpClient
 from pymodbus.exceptions import ModbusException
+import sys
+import os
 
 class ModbusScannerApp:
     def __init__(self, master):
@@ -12,8 +14,8 @@ class ModbusScannerApp:
         self.master.title("ModbuSIS by OtomaSIS")
 
         # Pencere boyutunu ayarlama
-        self.master.geometry("900x600")
-        self.master.resizable(True, True)
+        self.master.geometry("1000x600")
+        self.master.resizable(False, False)
 
         # Grid yapılandırması
         master.grid_rowconfigure(1, weight=1)
@@ -41,16 +43,9 @@ class ModbusScannerApp:
         self.scan_button = tk.Button(master, text="Tara", command=self.start_scan, width=10)
         self.scan_button.grid(row=0, column=4, padx=2, pady=2, sticky="w")
 
-        # Logo
-        try:
-            img = Image.open("otomasis_logo.png")
-            img = img.resize((150, 75), Image.LANCZOS)
-            self.logo_img = ImageTk.PhotoImage(img)
-            self.logo_label = tk.Label(master, image=self.logo_img, cursor="hand2")
-            self.logo_label.grid(row=0, column=5, padx=5, pady=5, sticky="e")
-            self.logo_label.bind("<Button-1>", self.on_about)
-        except Exception as e:
-            print("Logo yüklenemedi:", e)
+        # Hakkında Butonu
+        self.about_button = tk.Button(master, text="Hakkında", command=self.on_about, width=10)
+        self.about_button.grid(row=0, column=5, padx=5, pady=5, sticky="e")
 
         # Sonuçlar alanı
         self.result_text = tk.Text(master, wrap="none", width=120, height=25)
@@ -83,10 +78,9 @@ class ModbusScannerApp:
         network = ipaddress.ip_network(subnet, strict=False)
         for ip in network.hosts():
             ip_str = str(ip)
-            # Modbus taramasını ayrı bir thread'e alalım
             thread = threading.Thread(target=self.scan_ip, args=(ip_str, local_ip, found_devices))
             thread.start()
-            thread.join(0.01)  # Her IP için kısa bir bekleme süresi
+            thread.join(0.1)
 
         self.status_label.config(text=f"Tarama tamamlandı. {len(found_devices)} cihaz bulundu.")
 
@@ -122,15 +116,14 @@ class ModbusScannerApp:
             client.close()
         return device_info
 
-    def on_about(self, event=None):
+    def on_about(self):
         about_text = (
             "ModbuSIS by OtomaSIS v1.0\n\n"
             "Bu program, OtomaSIS Ltd. Şti. tarafından geliştirilmiştir.\n"
-            "Lisans: GPL \n"
+            "Lisans: GPL (Genel Kamu Lisansı) \n"
             "Yazılımı özgürce dağıtabilirsiniz.\n"
-            "Bu program, OtomaSIS Ltd. Şti. tarafından geliştirilmiştir.\n"
-            "Bu program, OtomaSIS Ltd. Şti. tarafından geliştirilmiştir.\n"
-            "Bu program, OtomaSIS Ltd. Şti. tarafından geliştirilmiştir.\n"
+            "Yazılımın kodlarına GitHub üzerinden erişebilirsiniz. \n "
+            "https://github.com/hsnbrn/modbuSIS"
         )
         messagebox.showinfo("Hakkında", about_text)
 
