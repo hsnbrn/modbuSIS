@@ -1,6 +1,6 @@
 # modbuSIS
 
-GPL3.0 ile lisanslanmıştır. 
+GPL-3.0 ile lisanslanmıştır. 
 
 Windows işletim sistemleri için exe dosyasını kullanabilirsiniz. 
 MacOS ve Linux sistemler için derlenmiş kod üretilmemiştir, ancak yazılımın kaynak kodlarını indirip GPL Lisansı'na göre kullanabilirsiniz. 
