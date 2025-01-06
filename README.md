@@ -7,7 +7,7 @@ Sürümler arasındaki farklar ve güncel sürüm (v1.1) için "Releases" altın
 
 AMAÇ:
 
-Modbus, Schneider Electric'in geliştirmiş olduğu endüstriyel bir haberleşme protokolüdür. Bu protokol son yıllarda TCP/IP ağlarında çalışmata ve TCP/IP protokülü ile içe içe geçmiş bulunmaktadır. Bu anlamda, TCP/IP ağlarında (ethernet) kullanılan araçlardan faydalanmak gerekmektedir. Ancak bu araçların kimi ücretli ve kapalı kaynak kodlu, kimi de tüm gereksinimleri karşılamamaktadir. Bu anlamda, ağda Modbus cihazlarını tespit etmek için birkaç hamle gerekmektedir. ModbuSIS yazılımı, ethernet ağlarına ARP anonsları gönderir ve gelen yanıtların içinde Modbbus cihazları varsa bunların kimlik bilgilerini listeler. Bu anlamda bir çaığı doldurmaktadır. 
+Modbus, Schneider Electric'in geliştirmiş olduğu endüstriyel bir haberleşme protokolüdür. Bu protokol son yıllarda TCP/IP ağlarında çalışmata ve TCP/IP protokülü ile içe içe geçmiş bulunmaktadır. Bu anlamda, TCP/IP ağlarında (ethernet) kullanılan araçlardan faydalanmak gerekmektedir. Ancak bu araçların kimi ücretli ve kapalı kaynak kodlu, kimi de tüm gereksinimleri karşılamamaktadir. Bu anlamda, ağda Modbus cihazlarını tespit etmek için birkaç hamle gerekmektedir. ModbuSIS yazılımı, ethernet ağlarına ARP anonsları gönderir ve gelen yanıtların içinde Modbbus cihazları varsa bunların kimlik bilgilerini listeler. ModbuSIS yazılımı, bu anlamda, bir açığı doldurmaktadır. 
 
 YÖNTEM:
 
