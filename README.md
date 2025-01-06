@@ -12,7 +12,7 @@ Modbus, Schneider Electric'in geliştirmiş olduğu endüstriyel bir haberleşme
 YÖNTEM:
 
 Sürüm 1.0'da ping scan kullanılmış ve yanıt veren IP'lere Modbus FC43 gönderilmiştir. Gelen yanıtlar listelenir.
-Sürüm 1.1'de ise ping scan terkedilmiş ve ARP scan yapılmışır. Ağdaki tüm cihazlar mac/vendor veritabanı ile listelenir ve Modbus cihazları koyu renkte kimlik bilhileri ile listelenir. Sürüm 1.1 Nmap kullanmaktadır. Nmap gereksinimleri kullanıcılara bırakılmıştır. 
+Sürüm 1.1'de ise ping scan terkedilmiş ve ARP scan yapılmışır. Ağdaki tüm cihazlar mac/vendor veritabanı ile listelenir ve Modbus cihazları koyu renkte kimlik bilgileri ile listelenir. Sürüm 1.1 Nmap kullanmaktadır. Nmap gereksinimleri kullanıcılara bırakılmıştır. 
 
 KOD YAPISI: 
 
