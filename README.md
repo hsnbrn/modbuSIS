@@ -32,4 +32,6 @@ Sürüm 1.0 Subnet üzerinden tarama yaptığı için farklı subnetler kullanı
 Sürüm 1.0'da Local IP, yazılımın koştuğu bilgisayardaki modbus ağına bağlanmış olan interface anlamına gelir. Örneğin hem ethernet hem de Wİ-Fİ kullanıyorsanız, arayüzden IP'nizi öğrenip Local IP kutusuna o interface'in aldığı IP'yi girmelisiniz. 
 Örneğin; Wİ-Fİ adaptörünüz 192.168.1.50 IP'sini almış. Ethernet adaptörünüz ise 192.168.1.20 IP'sini almış. Modbus cihazlarınız ethernet ağında. Bu durumda Local IP alanına 192.168.1.20 girmeniz gerekir. 
 
+Sürüm 1.1'de, endüstriyel ağa bağlı olan adaptörü (wi-fi ya da ethernet) seçmeniz tarama için yeterlidir. 
+
 Sorularınız için baran@otomasis.email üzerinden iletişime geçebilirsiniz. 
