@@ -19,6 +19,7 @@ KOD YAPISI:
 Python3 ile yazılmıştır. Kaynak kod açık olup GPL-3.0 lisansı ile lisanlanmıştır. 
 
 
+EK AÇIKLAMALAR: 
 
 Windows işletim sistemleri için exe dosyasını kullanabilirsiniz. 
 MacOS ve Linux sistemler için derlenmiş kod üretilmemiştir, ancak yazılımın kaynak kodlarını indirip GPL Lisansı'na göre kullanabilirsiniz. 
